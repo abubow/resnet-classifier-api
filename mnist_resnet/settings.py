@@ -27,8 +27,7 @@ SECRET_KEY = "django-insecure-02sa6i$bhg!+(74c%pht+uj@i=vs0es^@noyoau0w7zo(wjgb%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -80,10 +79,10 @@ WSGI_APPLICATION = "mnist_resnet.wsgi.application"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+    # "default": {
+    #     "ENGINE": "django.db.backends.sqlite3",
+    #     "NAME": BASE_DIR / "db.sqlite3",
+    # }
 }
 
 
@@ -134,3 +133,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Load the model once when the server starts
 MODEL_PATH = os.path.join(BASE_DIR, 'path/to/your/best_model.keras')
 MODEL = tf.keras.models.load_model(MODEL_PATH) if os.path.exists(MODEL_PATH) else None
+
+STATICFILES_DIRS = [BASE_DIR/'static',]
+STATIC_ROOT = BASE_DIR/'staticfiles'
