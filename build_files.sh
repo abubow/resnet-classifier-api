@@ -1,5 +1,6 @@
 #!/bin/bash
 # upgrade pip
+python3.9 -m ensurepip
 python3.9 -m pip install --upgrade pip
 
 echo "Building the project..."
