@@ -134,5 +134,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MODEL_PATH = os.path.join(BASE_DIR, 'path/to/your/best_model.keras')
 MODEL = tf.keras.models.load_model(MODEL_PATH) if os.path.exists(MODEL_PATH) else None
 
-# STATICFILES_DIRS = [BASE_DIR/'static',]
-# STATIC_ROOT = BASE_DIR/'staticfiles'
+STATICFILES_DIRS = [BASE_DIR/'static',]
+STATIC_ROOT = BASE_DIR/'staticfiles'
